@@ -6,7 +6,7 @@ body {
 }
 
 .overlay {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@ body {
 }
 
 .modal {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 50%;
@@ -57,31 +57,32 @@ body {
     margin-right: 20px;
     margin-top: 20px;
     min-width: 250px;
+    height: 500px;
+}
+
+.messages-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .message-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 15px 0 15px 0;
-}
-
-.message-info {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    margin-top: 35px;
 }
 
 .yours {
-    margin-right: 0;
-}
-
-.author {
-    margin-right: 10px;
+    margin-right: 0px;
+    text-align: right;
+    color: red;
 }
 
 .message-text {
     margin-top: 10px;
+    color: black;
 }
 
 .user-container {
@@ -118,4 +119,12 @@ body {
 
 .user-name {
     margin: auto 10px;
+}
+
+.message-input {
+    height: 50px;
+    margin: 20px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
 }

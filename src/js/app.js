@@ -1,7 +1,7 @@
 import Chatbox from "../js/chatbox";
 import Userbox from "../js/userbox";
 
-const socket = new WebSocket('https://sse-ws-server-4itr.onrender.com:10000');
+const socket = new WebSocket('wss://sse-ws-server-4itr.onrender.com');
 const userbox = new Userbox();
 const chatbox = new Chatbox(socket);
 

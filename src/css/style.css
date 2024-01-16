@@ -13,8 +13,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
     z-index: 1;
 }
 
@@ -42,6 +40,25 @@ body {
     background-color: white;
 }
 
+.tooltip {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
 .alias {
     margin-top: 20px;
     height: 40px;
@@ -50,28 +67,27 @@ body {
 .chat-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 15px;
     margin-right: 20px;
     margin-top: 20px;
-    min-width: 250px;
+    width: 500px;
     height: 500px;
 }
 
 .messages-container {
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 20px;
-    padding-left: 20px;
+    width: 500px;
+    margin-bottom: 20px;
 }
 
 .message-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .yours {
@@ -99,6 +115,9 @@ body {
     border-radius: 15px 0 0 15px;
     max-width: 200px;
     min-width: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
 }
 
 .user-card {
@@ -127,4 +146,7 @@ body {
     width: 90%;
     border: 1px solid #ccc;
     border-radius: 15px;
+    align-self: flex-end;
+    margin-top: auto;
+    padding: 5px;
 }

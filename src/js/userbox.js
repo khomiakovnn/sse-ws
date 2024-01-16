@@ -1,17 +1,12 @@
 export default class Userbox {
     constructor () {
-        this.usersList = ['ivan', 'maria', 'dmitriy'];
-        this.userContainer = document.querySelector('.user-container')
+        this.userContainer = document.querySelector('.user-container');
     }
 
-    init () {
-        this.displayUsers();
-    }
-
-    displayUsers () {
+    displayUsers (usersList) {
         this.userContainer.innerHTML = ''
-        for (let index = 0; index < this.usersList.length; index++) {
-            const userCard = this._createUserCard(this.usersList[index]);
+        for (let index = 0; index < usersList.length; index++) {
+            const userCard = this._createUserCard(usersList[index]);
             this.userContainer.appendChild(userCard)
         }
     }
